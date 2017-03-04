@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World</title>
-  </head>
-  <body>
+{% extends "_base.html" %}
+
+{% block content %}
         <p>Hello World! I have been seen {{count}} times.</p>
-  </body>
-</html>
+
+        <form action="/" method="POST">
+            <div class="form-group">
+                <input name="text" class="form-control input-lg" type="text" placeholder="Enter a message" required>
+            </div>
+
+            <input type="submit" class="btn btn-primary btn-lg btn-block" value="Submit">
+        </form>
+{% endblock %}
+
